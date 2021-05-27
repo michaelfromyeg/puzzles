@@ -27,8 +27,8 @@ if __name__ == '__main__':
     print(f'solve(5)\n> {solve5}')
 
     # Something a bit harder
-    solve20 = solve(20)
-    print(f'solve(20)\n> {solve20}')
+    # solve20 = solve(20)
+    # print(f'solve(20)\n> {solve20}')
 
     # Be warned... this takes a long time to print
     # solve26 = solve(26)
