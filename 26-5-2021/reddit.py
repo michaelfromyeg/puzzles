@@ -8,6 +8,8 @@ ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
 def solve(n: int) -> str:
     '''
     Compute the ABACABA sequence up to N chars
+
+    NOTE: this does not meet the challenge requirement of O(n) memory!
     '''
     if (n <= 0):
         raise ValueError
