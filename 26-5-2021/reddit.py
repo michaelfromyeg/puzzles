@@ -2,13 +2,40 @@
 
 # Solution
 
-def solve():
-  print('TODO')
+ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
 
-if __name__ == 'main':
-  solve()
+
+def solve(n: int) -> str:
+    '''
+    Compute the ABACABA sequence up to N chars
+    '''
+    if (n <= 0):
+        raise ValueError
+    if (n == 1):
+        return ALPHABET[0]
+    return solve(n - 1) + ALPHABET[n - 1] + solve(n - 1)
+
+
+if __name__ == '__main__':
+    solve1 = solve(1)
+    print(f'solve(2)\n> {solve1}')
+    solve2 = solve(2)
+    print(f'solve(2)\n> {solve2}')
+    solve5 = solve(5)
+    print(f'solve(5)\n> {solve5}')
+
+    # Something a bit harder
+    solve20 = solve(20)
+    print(f'solve(20)\n> {solve20}')
+
+    # Be warned... this takes a long time to print
+    # solve26 = solve(26)
+    # print(f'solve(26)\n> {solve26}')
 
 # And don't forget to write your tests!
 
-assert(...,...)
-
+assert(solve(1) == 'a')
+assert(solve(2) == 'aba')
+assert(solve(3) == 'abacaba')
+assert(solve(4) == 'abacabadabacaba')
+assert(solve(5) == 'abacabadabacabaeabacabadabacaba')
