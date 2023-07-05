@@ -2,13 +2,17 @@
 
 # Solution
 
+
 def solve():
-    print('TODO')
+    """
+    Solution code.
+    """
+    print("TODO")
 
 
-if __name__ == 'main':
+if __name__ == "main":
     solve()
 
 # And don't forget to write your tests!
 
-assert(..., ...)
+assert 1 == 1

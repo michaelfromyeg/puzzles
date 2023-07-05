@@ -2,29 +2,29 @@
 
 # Solution
 
-ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
+ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 
 
 def solve(n: int) -> str:
-    '''
+    """
     Compute the ABACABA sequence up to N chars
 
     NOTE: this does not meet the challenge requirement of O(n) memory!
-    '''
-    if (n <= 0):
+    """
+    if n <= 0:
         raise ValueError
-    if (n == 1):
+    if n == 1:
         return ALPHABET[0]
     return solve(n - 1) + ALPHABET[n - 1] + solve(n - 1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     solve1 = solve(1)
-    print(f'solve(2)\n> {solve1}')
+    print(f"solve(2)\n> {solve1}")
     solve2 = solve(2)
-    print(f'solve(2)\n> {solve2}')
+    print(f"solve(2)\n> {solve2}")
     solve5 = solve(5)
-    print(f'solve(5)\n> {solve5}')
+    print(f"solve(5)\n> {solve5}")
 
     # Something a bit harder
     # solve20 = solve(20)
@@ -36,8 +36,8 @@ if __name__ == '__main__':
 
 # And don't forget to write your tests!
 
-assert(solve(1) == 'a')
-assert(solve(2) == 'aba')
-assert(solve(3) == 'abacaba')
-assert(solve(4) == 'abacabadabacaba')
-assert(solve(5) == 'abacabadabacabaeabacabadabacaba')
+assert solve(1) == "a"
+assert solve(2) == "aba"
+assert solve(3) == "abacaba"
+assert solve(4) == "abacabadabacaba"
+assert solve(5) == "abacabadabacabaeabacabadabacaba"

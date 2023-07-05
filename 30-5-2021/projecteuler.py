@@ -2,16 +2,17 @@
 
 # Solution
 
-def solve():
-  '''
-  ...
-  '''
-  print('TODO')
 
-if __name__ == 'main':
-  solve()
+def solve():
+    """
+    ...
+    """
+    print("TODO")
+
+
+if __name__ == "main":
+    solve()
 
 # And don't forget to write your tests!
 
-assert(...,...)
-
+assert 1 == 1
